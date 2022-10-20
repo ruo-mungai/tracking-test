@@ -1,5 +1,5 @@
 class Project < ApplicationRecord
-  validates :category , presence: true
+  validates :category , inclusion: {in: %w(Android Fullstack)}
   validates :name, presence: true
   validates :description, length: { minimum: 10 }
 
